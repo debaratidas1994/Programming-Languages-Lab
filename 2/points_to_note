@@ -1,0 +1,14 @@
+2.
+a. Examine garbage / memory leak in ‘C’
+i. using memcheck.h library file.
+ii. using valgrind tool.
+
+
+For part (i), to compile the program:
+
+1. gcc -c filename
+2.MALLOC_TRACE=./a.txt ./a.out
+3.cat a.txt
+(output here has a hex number i.e address in square brackets. use this number in the next command)
+4.addr2line ./a.out address_from_above
+5.mtrace ./a.txt
